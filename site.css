@@ -1,0 +1,94 @@
+/* College of San Mateo Athletic Center — replica styling.
+   Their site sets Poppins on white, with a navy masthead (#002347), CSM blue #004990 for headings
+   and buttons, and orange #f16521 for highlights. */
+
+:root{
+  --navy:  #002347;
+  --blue:  #004990;
+  --blue2: #014687;
+  --sky:   #0096d6;
+  --orange:#f16521;
+  --ink:   #1b2430;
+  --text:  #4a4a4a;
+  --muted: #6d7682;
+  --line:  #e3e7ec;
+  --wash:  #f2f5f9;
+}
+*{ box-sizing:border-box }
+body{ margin:0; background:#fff; color:var(--text); font:16px/1.65 "Poppins", ui-sans-serif, system-ui, sans-serif }
+a{ color:var(--blue) }
+h1,h2,h3{ color:var(--blue); font-weight:700; line-height:1.2; text-wrap:balance }
+h1{ font-size:38px; margin:0 0 14px }
+h2{ font-size:26px; margin:36px 0 10px }
+h3{ font-size:19px; margin:22px 0 6px; color:var(--ink) }
+
+.preview-note{ background:#111820; color:#e8eef5; font-size:13px; line-height:1.5; padding:10px 16px; text-align:center }
+.preview-note b{ color:var(--orange) }
+.preview-note a{ color:#fff }
+
+header.site{ background:var(--navy) }
+header.site .in{ max-width:1200px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap }
+.logo img{ height:58px; width:auto; display:block }
+nav.site{ display:flex; gap:20px; flex-wrap:wrap; align-items:center }
+nav.site a{ color:#fff; text-decoration:none; font-size:13.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:4px 0; border-bottom:2px solid transparent }
+nav.site a.here{ border-bottom-color:var(--orange) }
+nav.site a.join{ background:var(--orange); padding:7px 14px; border:0 }
+nav.strip{ background:var(--wash); padding:8px 16px; display:flex; gap:6px; flex-wrap:wrap; justify-content:center; border-bottom:1px solid var(--line) }
+nav.strip a{ font-size:13.5px; text-decoration:none; color:var(--blue); padding:4px 12px; border-radius:999px }
+nav.strip a.on{ background:var(--blue); color:#fff }
+
+.hero{ height:300px; background:#2c7fb8 center 55%/cover; position:relative }
+.hero.pools{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Two-Pools-e1689712491668.jpg") }
+.hero.small{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Picture-003-e1663875348317.jpg") }
+.hero span{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(transparent, rgba(0,35,71,.75)); color:#fff; padding:40px 16px 18px; font-size:30px; font-weight:700; text-align:center }
+main{ max-width:1200px; margin:0 auto; padding:26px 16px 44px }
+.crumb{ font-size:13px; color:var(--muted); margin:0 0 16px }
+.lede{ font-size:17px; max-width:62em }
+
+.facts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin:18px 0 }
+.facts div{ background:var(--wash); border-top:4px solid var(--blue); padding:12px 14px; font-size:14.5px }
+.facts b{ display:block; color:var(--ink); font-size:17px; margin-bottom:2px }
+
+.cal-head{ display:flex; align-items:center; gap:10px; margin-top:34px; flex-wrap:wrap }
+.cal-head h2{ margin:0 }
+.live{ background:var(--orange); color:#fff; font-size:11px; font-weight:700; letter-spacing:.06em; border-radius:3px; padding:2px 8px; text-transform:uppercase }
+.sub{ color:var(--muted); margin:6px 0 10px; max-width:62em }
+.frame{ border:1px solid var(--line); height:680px }
+.frame iframe{ width:100%; height:100%; border:0; display:block }
+.cal-foot{ font-size:13.5px; color:var(--muted); margin:6px 0 0 }
+
+.finding{ background:#fff4ec; border-left:5px solid var(--orange); padding:12px 16px; margin:20px 0; font-size:14.5px }
+.finding ul{ margin:6px 0 0; padding-left:20px }
+.finding li{ margin:4px 0 }
+.est{ background:#ffe4d2; padding:0 3px }
+
+.notice{ display:grid; grid-template-columns:200px 1fr; gap:18px; align-items:start; background:var(--wash); padding:16px; margin:20px 0 }
+.notice img{ width:100%; height:auto; border:1px solid var(--line) }
+.notice p{ margin:0 0 8px }
+
+table.changes{ border-collapse:collapse; font-size:14px; width:100%; font-variant-numeric:tabular-nums }
+table.changes th, table.changes td{ border-bottom:1px solid var(--line); padding:6px 8px; text-align:left }
+table.changes th{ color:var(--ink) }
+.tablewrap{ overflow-x:auto }
+
+.cols{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px }
+.card{ border:1px solid var(--line); padding:14px 16px }
+.card h3{ margin-top:0; color:var(--blue) }
+.btn{ display:inline-block; background:var(--blue); color:#fff; text-decoration:none; padding:10px 18px; font-weight:600; font-size:14px; border-radius:3px }
+.btn.orange{ background:var(--orange) }
+
+footer.site{ background:var(--navy); color:#d6e1ee; font-size:14px }
+footer.site .in{ max-width:1200px; margin:0 auto; padding:28px 16px; display:flex; gap:48px; flex-wrap:wrap }
+footer.site b{ display:block; color:#fff; margin-bottom:6px }
+footer.site a{ color:#fff }
+footer.site .fine{ max-width:1200px; margin:0 auto; padding:0 16px 22px; font-size:12px; color:#9fb3c8 }
+
+@media (max-width:760px){
+  h1{ font-size:29px }
+  .hero{ height:180px }
+  .hero span{ font-size:22px }
+  .frame{ height:620px }
+  nav.site{ gap:12px }
+  .notice{ grid-template-columns:1fr }
+  .notice img{ max-width:260px }
+}
