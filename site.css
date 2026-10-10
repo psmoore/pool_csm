@@ -1,13 +1,17 @@
-/* College of San Mateo Athletic Center — replica styling.
-   Their site sets Poppins on white, with a navy masthead (#002347), CSM blue #004990 for headings
-   and buttons, and orange #f16521 for highlights. */
+/* College of San Mateo Athletic Center — replica styling, measured from comfit.smccd.edu/aquatics:
+   a 126px masthead in CSM blue rgb(0,73,144) with a bold italic Poppins menu; a slider banner on light
+   gray with a pink rgb(219,67,96) caption; section headings in gray rgb(59,59,59), 28px/600, centered
+   between two rules; body text rgb(74,74,74); buttons in rgb(1,70,135). */
 
 :root{
-  --navy:  #002347;
-  --blue:  #004990;
+  --navy:  #004990;
+  --blue:  #014687;
   --blue2: #014687;
   --sky:   #0096d6;
   --orange:#f16521;
+  --pink:  #db4360;
+  --head:  #3b3b3b;
+  --gray:  #eaeaea;
   --ink:   #1b2430;
   --text:  #4a4a4a;
   --muted: #6d7682;
@@ -17,9 +21,10 @@
 *{ box-sizing:border-box }
 body{ margin:0; background:#fff; color:var(--text); font:16px/1.65 "Poppins", ui-sans-serif, system-ui, sans-serif }
 a{ color:var(--blue) }
-h1,h2,h3{ color:var(--blue); font-weight:700; line-height:1.2; text-wrap:balance }
-h1{ font-size:38px; margin:0 0 14px }
-h2{ font-size:26px; margin:36px 0 10px }
+h1,h2,h3{ color:var(--head); font-weight:600; line-height:1.2; text-wrap:balance }
+h1{ font-size:30px; margin:0 0 16px; display:flex; align-items:center; gap:14px; text-align:center }
+h1::before,h1::after{ content:""; flex:1 1 30px; border-top:1px solid var(--navy) }
+h2{ font-size:28px; margin:36px 0 10px }
 h3{ font-size:19px; margin:22px 0 6px; color:var(--ink) }
 
 .preview-note{ background:#111820; color:#e8eef5; font-size:13px; line-height:1.5; padding:10px 16px; text-align:center }
@@ -27,20 +32,22 @@ h3{ font-size:19px; margin:22px 0 6px; color:var(--ink) }
 .preview-note a{ color:#fff }
 
 header.site{ background:var(--navy) }
-header.site .in{ max-width:1200px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap }
-.logo img{ height:58px; width:auto; display:block }
-nav.site{ display:flex; gap:20px; flex-wrap:wrap; align-items:center }
-nav.site a{ color:#fff; text-decoration:none; font-size:13.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:4px 0; border-bottom:2px solid transparent }
-nav.site a.here{ border-bottom-color:var(--orange) }
-nav.site a.join{ background:var(--orange); padding:7px 14px; border:0 }
+header.site .in{ max-width:1200px; margin:0 auto; padding:10px 16px; min-height:126px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap }
+.logo img{ height:92px; width:auto; display:block }
+nav.site{ display:flex; gap:6px 18px; flex-wrap:wrap; align-items:center; justify-content:flex-end; max-width:720px }
+nav.site a{ color:#fff; text-decoration:none; font-size:16px; font-weight:700; font-style:italic; text-transform:uppercase; padding:4px 0; border-bottom:2px solid transparent }
+nav.site a.here{ border-bottom-color:#fff }
 nav.strip{ background:var(--wash); padding:8px 16px; display:flex; gap:6px; flex-wrap:wrap; justify-content:center; border-bottom:1px solid var(--line) }
 nav.strip a{ font-size:13.5px; text-decoration:none; color:var(--blue); padding:4px 12px; border-radius:999px }
 nav.strip a.on{ background:var(--blue); color:#fff }
 
-.hero{ height:300px; background:#2c7fb8 center 55%/cover; position:relative }
-.hero.pools{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Two-Pools-e1689712491668.jpg") }
-.hero.small{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Picture-003-e1663875348317.jpg") }
-.hero span{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(transparent, rgba(0,35,71,.75)); color:#fff; padding:40px 16px 18px; font-size:30px; font-weight:700; text-align:center }
+.hero{ background:var(--gray); padding:28px 16px }
+.hero .slide{ max-width:1000px; margin:0 auto; aspect-ratio:1000/340; max-height:340px; background:#5a8fb8 center 60%/cover; position:relative }
+.hero.pools .slide{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Two-Pools-e1689712491668.jpg") }
+.hero.small .slide{ background-image:url("https://comfit.smccd.edu/wp-content/uploads/2015/04/Picture-003-e1663875348317.jpg") }
+.hero .cap{ position:absolute; right:3%; bottom:12%; display:flex; flex-direction:column; align-items:center; gap:8px; max-width:94% }
+.hero .cap b{ background:var(--pink); color:#fff; font:700 clamp(20px,3.4vw,36px)/1.2 "Open Sans","Poppins",sans-serif; padding:4px 14px }
+.hero .cap i{ background:rgba(255,255,255,.92); color:#222; font:300 clamp(16px,2.8vw,30px)/1.2 "Open Sans","Poppins",sans-serif; font-style:normal; padding:4px 14px }
 main{ max-width:1200px; margin:0 auto; padding:26px 16px 44px }
 .crumb{ font-size:13px; color:var(--muted); margin:0 0 16px }
 .lede{ font-size:17px; max-width:62em }
@@ -73,8 +80,8 @@ table.changes th{ color:var(--ink) }
 
 .cols{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px }
 .card{ border:1px solid var(--line); padding:14px 16px }
-.card h3{ margin-top:0; color:var(--blue) }
-.btn{ display:inline-block; background:var(--blue); color:#fff; text-decoration:none; padding:10px 18px; font-weight:600; font-size:14px; border-radius:3px }
+.card h3{ margin-top:0 }
+.btn{ display:inline-block; background:var(--blue); color:#fff; text-decoration:none; padding:10px 18px; font-weight:600; font-size:16px }
 .btn.orange{ background:var(--orange) }
 
 footer.site{ background:var(--navy); color:#d6e1ee; font-size:14px }
@@ -85,10 +92,19 @@ footer.site .fine{ max-width:1200px; margin:0 auto; padding:0 16px 22px; font-si
 
 @media (max-width:760px){
   h1{ font-size:29px }
-  .hero{ height:180px }
-  .hero span{ font-size:22px }
+  .hero{ padding:14px 16px }
+  .logo img{ height:64px }
+  nav.site a{ font-size:13px }
   .frame{ height:620px }
   nav.site{ gap:12px }
   .notice{ grid-template-columns:1fr }
   .notice img{ max-width:260px }
 }
+
+.with-side{ display:grid; grid-template-columns:minmax(0,1fr) 250px; gap:36px; align-items:start }
+.side{ text-align:center }
+.side h2{ margin-top:0 }
+.side p{ font-style:italic; text-align:left; font-size:15px }
+.side .btn{ display:block }
+.more{ font-weight:600; text-decoration:none }
+@media (max-width:860px){ .with-side{ grid-template-columns:1fr } }

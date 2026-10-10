@@ -63,7 +63,7 @@ def shell(slug, title, description, body):
 <meta name="description" content="{description}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&display=swap">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -80,13 +80,14 @@ def shell(slug, title, description, body):
     <a class="logo" href="index.html"><img src="{LOGO}" alt="College of San Mateo Athletic Center"></a>
     <nav class="site">
       <a href="{SITE}/membership/" {EXT}>Membership</a>
-      <a class="join" href="{JOIN}" {EXT}>Join Online</a>
+      <a href="{JOIN}" {EXT}>Join Online</a>
       <a href="{SITE}/fitness/" {EXT}>Fitness</a>
       <a class="here" href="index.html">Aquatics</a>
       <a href="{SITE}/group-exercise/" {EXT}>Group Exercise</a>
       <a href="{SITE}/pilates/" {EXT}>Pilates</a>
       <a href="{SITE}/about/" {EXT}>About</a>
       <a href="{SITE}/contact-us/" {EXT}>Contact Us</a>
+      <a href="{JOIN}" {EXT}>Login</a>
     </nav>
   </div>
   <nav class="strip" aria-label="Pages in this preview">
